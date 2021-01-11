@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This project was made by Jeydin21. If you fork this Repl, make sure you give credit to me or I'll be very pissed and hunt you down. Thanks! -->
+
+<head>
+  <meta property="og:url" content="https://notebook.jeydin21.repl.co" />
+  <meta name="theme-color" content="#2C2F33" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Browser Notebook" />
+	<meta property="og:description" content="A handy notebook that stays in your browser! It stores data in your cookies, so you never have to worry about losing data!"
+	/>
+	<meta property="image" content="logo.jpg" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Browser Notebook</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="logo.jpg" type="image/png" sizes="16x16">
+</head>
+
+<body>
+	<div class="app">
+		<div class="topbar">
+			<div class="titlebar">
+				<div class="title">
+					Title:
+					<input type="text" id="name" autocomplete="off">
+				</div>
+			</div>
+			<div class="toolbar">
+				<div class="btngroup">
+					<button class="btn filebtn" id="new">New</button>
+					<button class="btn filebtn" id="open">Home</button>
+				</div>
+			</div>
+		</div>
+		<div class="editor">
+			<div class="fileList">
+				<div class="list-header">
+					<p class="file-name">Name</p>
+					<p>Size</p>
+					<p>Created</p>
+					<p>Modified</p>
+					<p></p>
+				</div>
+				<div class="list-items">
+					<p>Loading files...</p>
+				</div>
+			</div>
+			<textarea class="document" id="document" cols="104"></textarea>
+		</div>
+	</div>
+	<template id="fileTemplate">
+		<div class="file">
+			<p class="file-name">{{name}}</p>
+			<p class="file-size">{{size}}</p>
+			<p class="file-datec">{{datec}}</p>
+			<p class="file-datem">{{datem}}</p>
+			<p class="file-id">{{id}}</p>
+			<button class="file-delete">Delete</button>
+		</div>
+	</template>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
